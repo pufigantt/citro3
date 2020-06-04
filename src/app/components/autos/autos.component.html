@@ -1,0 +1,21 @@
+<h1>Autos<small>Marvel y DC</small></h1>
+<hr>
+<div class="card-columns"></div>  
+<div class="row"> 
+ <div class="col-lg-3 col-sm-3"> 
+  <div class="card animated fadeIn fast" *ngFor="let auto of autos; let i = index"> 
+   <img class="card-img-top img-fluid" [src]="auto.img" [alt]="auto.nombre"> 
+    <div class="card-block">
+    <h4 class="card-title">{{auto.nombre}}</h4>
+    <p class="card-text">{{auto.precio}}</p>
+    <p class="card-text"><small class="text-muted">{{auto.dscto}}</small></p>
+    <button (click)="verAuto(i)" type="button" class="btn btn-outline-primary btn-block">
+      Ver mas...
+    </button>
+   </div>
+  </div>
+ </div>
+</div>
+
+<!-- <div class="Card"> -->
+<!-- <img class="card-img-top img-fluid" src="./assets/img/aquaman.png" alt="Card image cap"> -->
